@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Login</h2>
+<link rel="stylesheet" href="style.css">
+<form onsubmit="return login()">
+  <input id="user" placeholder="Usuario"><br><br>
+  <input id="pass" type="password" placeholder="Contraseña"><br><br>
+  <button>Entrar</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+function login(){
+  let u = document.getElementById("user").value;
+  let p = document.getElementById("pass").value;
+
+  if(p === "12345"){
+    document.body.innerHTML = "<h1>Bienvenido " + u + "</h1>";
+  } else {
+    document.getElementById("msg").innerText = "Error de login";
+  }
+
+  return false;
+}
+</script>
+
+</body>
+</html>
